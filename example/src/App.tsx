@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-import { ExampleComponent } from 'brreg-components'
+import { BrregSearcher } from 'brreg-components'
 import 'brreg-components/dist/index.css'
+import { IAccount } from '../../dist/interfaces/IAccount'
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+
+interface Props {
+
 }
 
-export default App
+interface State {
+}
+
+
+
+
+export class  App extends Component<Props, State> {
+  
+  test (test: IAccount) {
+    console.log(test)
+  }
+
+  render() {
+    return <BrregSearcher SearchTerm={"bygg"} SellectedAccountCallback={this.test.bind(this)}></BrregSearcher>
+  }
+}
+

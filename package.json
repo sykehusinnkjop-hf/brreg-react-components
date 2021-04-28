@@ -59,5 +59,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@fluentui/font-icons-mdl2": "^8.0.5",
+    "@fluentui/react": "^8.13.0"
+  }
 }

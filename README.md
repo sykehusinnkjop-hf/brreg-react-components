@@ -13,16 +13,19 @@ npm install --save brreg-components
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+export class  App extends Component<Props, State> {
 
-import MyComponent from 'brreg-components'
-import 'brreg-components/dist/index.css'
+  // callback function recieves an account back when an account is clicked on
+  AccountCallback (account: IAccount) {
+    console.log(account)
+  }
 
-class Example extends Component {
   render() {
-    return <MyComponent />
+    return <BrregSearcher SearchTerm={"bygg"} SellectedAccountCallback={this.test.bind(this)}></BrregSearcher>
   }
 }
+
+
 ```
 
 ## License
