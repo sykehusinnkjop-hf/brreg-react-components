@@ -1,8 +1,8 @@
 {
   "name": "brreg-components",
   "version": "1.0.0",
-  "description": "A collection of components to help get accounts from the Brønnøysundregister API",
-  "author": "Ballzer0",
+  "description": "A collection of components to help get accounts from the Brønnøysundregister API, still in early stages, expect changes",
+  "author": "ballzer0",
   "license": "MIT",
   "repository": "https://github.com/sykehusinnkjop-hf/brreg-react-components.git",
   "main": "dist/index.js",
