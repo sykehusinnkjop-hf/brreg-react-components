@@ -1,6 +1,6 @@
 # brreg-components
 
-> A collection of components to help get accounts from the Brønnøysundregister API
+>A collection of components to help get accounts from the Brønnøysundregister API, still in early stages, expect changes
 
 [![NPM](https://img.shields.io/npm/v/brreg-components.svg)](https://www.npmjs.com/package/brreg-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
