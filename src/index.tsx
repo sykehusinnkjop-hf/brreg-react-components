@@ -96,6 +96,13 @@ export class BrregSearcher extends Component<Props, State>  {
     this.setState({response:response})
   }
 
+  async componentDidUpdate(prevProps: Props) {
+    if(this.props.SearchTerm != prevProps.SearchTerm) {
+      let response = await BrregSearcher.SearchBrreg(this.props.SearchTerm)
+      this.setState({response:response})
+    }
+  }
+
   render() {
     if (this.state.response === undefined) {
       return <div></div>
