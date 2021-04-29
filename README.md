@@ -13,16 +13,34 @@ npm install --save brreg-components
 ## Usage
 
 ```tsx
-export class  App extends Component<Props, State> {
+import * as React from 'react'
+import {BrregSearcher} from 'brreg-components'
+import { IAccount } from 'brreg-components/dist/interfaces/IAccount'
 
-  // callback function recieves an account back when an account is clicked on
-  AccountCallback (account: IAccount) {
-    console.log(account)
-  }
+interface Props {
+    SearchWord: string | undefined;
+    onChange: (newValue: string | undefined) => void;
+}
+interface State {
+    
+}
 
-  render() {
-    return <BrregSearcher SearchTerm={"bygg"} SellectedAccountCallback={this.test.bind(this)}></BrregSearcher>
-  }
+export default class BrregSearchComponent extends React.Component<Props, State> {
+    state = {}
+    
+    //function is called when the user clicks an account
+    CallBackFunction(account: IAccount) {
+        console.log(account)
+        this.props.onChange(account.OrgNumber)
+      }
+
+    render() {
+        return (
+            <div >
+                <BrregSearcher SearchTerm={"bygg"} SellectedAccountCallback={this.CallBackFunction.bind(this)}></BrregSearcher>
+            </div>
+        )
+    }
 }
 
 
