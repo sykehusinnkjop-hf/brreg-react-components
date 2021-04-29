@@ -1,6 +1,6 @@
 {
   "name": "brreg-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A collection of components to help get accounts from the Brønnøysundregister API, still in early stages, expect changes",
   "author": "ballzer0",
   "license": "MIT",
