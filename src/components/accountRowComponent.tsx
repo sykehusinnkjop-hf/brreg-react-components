@@ -28,7 +28,7 @@ export default class AccountRowComponent extends Component<AccountRowComponentPr
                 </div>
                 <div>
                     <h3 style={{marginBottom:0}}>{this.props.Account.Name}</h3>
-                    <text>{this.props.Account.OrgNumber}</text>
+                    <div>{this.props.Account.OrgNumber}</div>
                     <AddressComponent Address={this.props.Account.BusinessAddress}></AddressComponent>
                 </div>
             </div>
