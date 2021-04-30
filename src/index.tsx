@@ -29,7 +29,17 @@ export class BrregSearcher extends Component<Props, State>  {
 
 
   private static async SearchBrreg(searchPhrase:string):Promise<BrregSearch> {
-    let response = await fetch("https://data.brreg.no/enhetsregisteret/api/enheter/?navn=" + searchPhrase)
+    let response:Response
+
+    var pattern = new RegExp("^\\d{9}$");
+
+    //If the searchPhrase is a 9 digit number, query for orgNumber, else Query for the name.
+    if(pattern.test(searchPhrase)) {
+      response = await fetch("https://data.brreg.no/enhetsregisteret/api/enheter/?organisasjonsnummer=" + searchPhrase)
+    } else {
+      response = await fetch("https://data.brreg.no/enhetsregisteret/api/enheter/?navn=" + searchPhrase)
+    }
+
     let responsejson = await response.json();
 
     let result = (responsejson as BrregSearch)
