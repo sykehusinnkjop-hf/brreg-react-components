@@ -48,4 +48,4 @@ export default class BrregSearchComponent extends React.Component<Props, State> 
 
 ## License
 
-MIT © [Ballzer0](https://github.com/Ballzer0)
+MIT © [Ballzer0](https://github.com/sykehusinnkjop-hf)
